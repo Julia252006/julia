@@ -1,0 +1,16 @@
+{% extends 'view_template.html' %}
+
+{% block header %}
+    <title>Register Page</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
